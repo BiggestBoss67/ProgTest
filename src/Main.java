@@ -20,15 +20,15 @@ void main() {
     System.out.println("--------------------------------------------------------------------------------------------------------------------");
     System.out.println("CONSOLE SALES TOTALS FOR EACH CITY");
     System.out.println("--------------------------------------------------------------------------------------------------------------------");
-
+    int maxSales = 0;
+    String topCity = "";
     for (int i = 0; i < sales.length; i++) {
         int cityTotal = 0;
         for (int j = 0; j < sales.length; j++)
             cityTotal += sales[i][j];
         System.out.printf("%-20s %d%n", cities[i], cityTotal);
 
-        int maxSales = 0;
-        String topCity;
+
 
         if (cityTotal > maxSales) {
             maxSales = cityTotal;
@@ -37,6 +37,6 @@ void main() {
 
     }
     System.out.println("--------------------------------------------------------------------------------------------------------------------");
-    System.out.println("CITY WITH THE MOST SALES: %s%n", topCity);
+    System.out.printf("CITY WITH THE MOST SALES: %s%n", topCity);
     System.out.println("--------------------------------------------------------------------------------------------------------------------");
 }
